@@ -3,6 +3,7 @@ import {Container, ListGroup, ListGroupItem, Button} from 'reactstrap';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
 import uuid from 'uuid';
 import { connect } from 'react-redux';
+import {getItems} from '../actions/itemActions';
 
 class ShoppingList extends Component {
     
@@ -52,4 +53,6 @@ class ShoppingList extends Component {
     }
 }
 
-export default ShoppingList;
+mapStateToProps
+
+export default connect(mapStateToProps, {getItems}) (ShoppingList);
