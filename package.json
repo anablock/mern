@@ -8,7 +8,8 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Vuk Djukic",
   "license": "MIT",
@@ -16,9 +17,11 @@
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.1",
     "express": "^4.17.1",
-    "mongoose": "^5.6.8"
+    "mongoose": "^5.6.8",
+    "node": "^12.9.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
     "nodemon": "^1.19.1"
   }
 }
