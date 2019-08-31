@@ -4,7 +4,6 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const config = require('config');
 //const config = require('./node_modules/config');
-//config = require('../config/config');
 
 //const items = require('./routes/api/items');
 
