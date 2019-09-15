@@ -23,19 +23,29 @@ class AppNavbar extends Component {
 
   render() {
    return (
-     <div>
-       <Navbar color="dark" dark expand="sm" className="mb-5">
+     < div style = {headerStyle}>
+       <Navbar color="" dark expand="sm" className="mb-5">
          <Container>
-           <NavbarBrand href="/">Anablock</NavbarBrand>
+           <NavbarBrand href = "#home">
+             <img
+                src="/Users/vukdukic/projects/anablock/pwa1.5/public/img/LogosWorkingFiles/4white.png"
+                width="30"
+                height="30"
+                className="d-inline-block align-top"
+                alt="Anablock"
+              />
+             </NavbarBrand>
            <NavbarToggler onClick={this.toggle} />
            <Collapse isOpen={this.state.isOpen} navbar>
              <Nav className="ml-auto" navbar>
                <NavItem>
                  <NavLink href="https://github.com/vukdukic">
-                   Github
+                   
                 </NavLink>
                </NavItem>
-               <NavItem></NavItem>
+               <NavItem>
+                Blog
+               </NavItem>
              </Nav>
            </Collapse>
          </Container>
@@ -43,6 +53,13 @@ class AppNavbar extends Component {
      </div>
    );
   }
+}
+
+const headerStyle = {
+  background: '#000',
+  color: '#fff',
+  textAlign: 'center',
+  padding: '10px'
 }
 
 export default AppNavbar;
